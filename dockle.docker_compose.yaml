@@ -1,0 +1,8 @@
+version: '3.1'
+
+services:
+  dockle:
+    image: goodwithtech/dockle:latest
+    command: ${IMAGE_NAME}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
