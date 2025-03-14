@@ -3,6 +3,6 @@ version: '3.1'
 services:
   trivy:
     image: aquasec/trivy:latest
-    command: image ${IMAGE_NAME}
+    command: image --severity ${SEVERITY} ${IMAGE_NAME}
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
